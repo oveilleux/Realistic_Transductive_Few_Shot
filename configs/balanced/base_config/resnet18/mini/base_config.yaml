@@ -1,0 +1,59 @@
+TRAINER:
+    pretrain: False     # If you want to continue training a pretrained model, set path to pretrain model
+    resume: False       # If you want to resume training a pretrained model, set path to pretrain model
+    print_freq: 10
+    meta_val_way: 5
+    meta_val_shot: 1
+    meta_val_metric: 'cosine'  # ('euclidean', 'cosine', 'l1', l2')
+    meta_val_iter: 500
+    meta_val_query: 15
+    alpha: -1.0
+    label_smoothing: 0.
+
+MODEL:
+    arch: 'resnet18' # ('resnet18', 'wideres')
+    num_classes: 64
+
+OPTIM:
+    epochs: 90
+    gamma: 0.1
+    lr: 0.1
+    lr_stepsize: 30
+    nesterov: False
+    weight_decay: 0.0001
+    optimizer_name: 'SGD'
+    scheduler: 'multi_step'
+
+DATA:
+    dataset: 'mini'
+    dataset_path: 'data/mini_imagenet'
+    batch_size_loader: 256
+    enlarge: True
+    num_workers: 4
+    disable_random_resize: False
+    jitter: False
+    path: 'data'
+    split_dir: 'split/mini'
+    target_data_path:
+    target_split_dir:
+
+EVAL:
+    evaluate: True      # Set to True to evaluate methods
+    number_tasks: 10000 # Number of tasks to evaluate
+    batch_size: 1
+    n_ways: 5
+    n_query: 15 # Balanced case: 15 query data per class
+    balanced: 'balanced' # ('balanced' | 'dirichlet')
+    alpha_dirichlet: 2
+    model_tag: 'best'
+    plt_metrics: ['accs']
+    shots: [1,5,10,20]
+    used_set: 'test'
+    fresh_start: False
+
+DISTRIBUTED:
+    cuda: True
+    visdom_port:
+    seed: 2020
+    ckpt_path: 'checkpoints/mini/softmax/resnet18' # path model checkpoint
+    log_path: 'logs' # path to where log files will be saved 

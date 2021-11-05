@@ -1,0 +1,4 @@
+METHOD:
+  method: 'SimpleShot'
+  num_NN: 1
+  norm_type: 'CL2N' # ('CL2N', 'L2N', 'UN')

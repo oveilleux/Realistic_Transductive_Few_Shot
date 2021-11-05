@@ -1,0 +1,7 @@
+METHOD:
+  method: 'TIM-GD'
+  temp: 15
+  loss_weights: [1.0, 10, 1.0]  # [Xent, H(Y), H(Y|X)]
+  lr_tim: 1e-4
+  iter: 1000
+  alpha: 1.0

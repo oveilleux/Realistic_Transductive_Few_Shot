@@ -1,0 +1,6 @@
+METHOD:
+  method: 'Entropy-min'
+  temp: 15
+  loss_weights: [1.0, 1.0]  # [Xent, H(Y|X)]
+  lr_entropy_min: 5e-5
+  iter: 25
