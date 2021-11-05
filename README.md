@@ -65,9 +65,9 @@ python3 -m src.main --base_config config/dirichlet/base_config/resnet18/mini/bas
 One of our main contribution is our realistic task sampling method following Dirichlet's distribution. 
 ![plot](plots/dirichlet_density_plot.png)
 
-Our realistic sampler can be found in [sampler.py](src/datasets/sampler.py) file. As we consider that our realistic task sampling method is one of the main findings of our paper, the sampler has been implemented following Pytorch's norms and in a way that it can be easily reused and integrated in other projects.
+Our realistic sampler can be found in [sampler.py](src/datasets/sampler.py) file. The sampler has been implemented following Pytorch's norms and in a way that it can be easily reused and integrated in other projects.
 
-The following notebook [exemple_realistic_sampler.ipynd](exemple_realistic_sampler.ipynb) is an exemple that shows how to initialize and use our realistic category sampler.
+The following notebook [exemple_realistic_sampler.ipynb](exemple_realistic_sampler.ipynb) is an exemple that shows how to initialize and use our realistic category sampler.
 
 # Contact
 For further questions or details, reach out to Olivier Veilleux (olivier.veilleux.2@ens.etsmtl.ca)
