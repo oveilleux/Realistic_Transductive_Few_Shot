@@ -36,6 +36,16 @@ source activate <env>
 
 ### 3.1 Table 1 and 2 results in paper
 
+### Evaluation in a 5-shot scenario on ***mini***-Imagenet using RN-18 as backbone (Table 1. in paper)  
+| Method        | 1-shot |  5-shot |  10-shot |  20-shot |
+| ---           |  ---   | ---     | ---      | ---      | 
+| SimpleShot    |  63.0  | 80.1    | 84.0     | 86.1     | 
+| PT-MAP        |  60.1 (&#8595;16.8) | 67.1 (&#8595;18.2)| 68.8 (&#8595;18.0)| 70.4 (&#8595;17.4)|
+| LaplacianShot | 65.4 (&#8595;4.7)  | 81.6 (&#8595;0.5)| 84.1 (&#8595;0.2)| 86.0 (&#8593;0.5)|
+| BDCSPN        | 67.0 (&#8595;2.4)  | 80.2 (&#8595;1.8)| 82.7 (&#8595;1.4)| 84.6 (&#8595;1.1)|   
+| TIM           |  67.3 (&#8595;4.5)  |  79.8 (&#8595;4.1)|  82.3 (&#8595;3.8)|  84.2 (&#8595;3.7)|
+| &alpha;-TIM  | **67.4**  | **82.5** | **85.9** | **87.9** | 
+
 To reproduce the results from Table 1. and 2. in the paper, from the root of the directory execute this python command.
 ```python
 python3 -m src.main --base_config <path_to_base_config_file> --method_config <path_to_method_config_file> 
