@@ -2,7 +2,7 @@
 
 
 ##  Introduction
-This repo contains the code for our NeurIPS 2021 submitted paper "Realistic evaluation of transductive few-shot learning". This is a framework that regroups all methods evaluated in our paper except for SIB and LR-ICI. Results provided in the paper can be reproduced with this repo. Code was developed under python 3.8.3 and pytorch 1.4.0.
+This repo contains the code for our NeurIPS 2021 paper "Realistic evaluation of transductive few-shot learning". This is a framework that regroups all methods evaluated in our paper except for SIB and LR-ICI. Results provided in the paper can be reproduced with this repo. Code was developed under python 3.8.3 and pytorch 1.4.0.
 
 
 ## 1. Getting started
